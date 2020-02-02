@@ -4,13 +4,13 @@
 #include "cards.h"
 #include "player.h"
 
-struct game {
-	struct ordered_cards draw_pile;
-	struct ordered_cards play_pile;
-	struct player human;
-	struct player computer;
-};
+typedef struct {
+	ordered_cards_t draw_pile;
+	ordered_cards_t play_pile;
+	player_t human;
+	player_t computer;
+} game_t;
 
-void game_init(struct game * g);
+void game_init(game_t * g);
 
 #endif

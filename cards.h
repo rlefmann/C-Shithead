@@ -8,18 +8,18 @@
 #define NUM_CARDS_HAND 3
 #define NUM_CARDS_UP_DOWN 3
 
-struct unordered_cards {
+typedef struct {
 	uint64_t bits;
 	size_t n;
-};
+} unordered_cards_t;
 
-void unordered_cards_init(struct unordered_cards * cards);
+void unordered_cards_init(unordered_cards_t * cards);
 
-struct ordered_cards {
+typedef struct {
 	char values[NUM_CARDS];
 	size_t n;
-};
+} ordered_cards_t;
 
-void ordered_cards_init(struct ordered_cards * cards);
+void ordered_cards_init(ordered_cards_t * cards);
 
 #endif

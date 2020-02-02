@@ -1,7 +1,7 @@
 #include "player.h"
 
 void
-player_init(struct player * p)
+player_init(player_t * p)
 {
 	unordered_cards_init(&p->hand);
 	unordered_cards_init(&p->upcards);

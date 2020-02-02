@@ -3,12 +3,12 @@
 
 #include "cards.h"
 
-struct player {
-	struct unordered_cards hand;
-	struct unordered_cards upcards;
-	struct unordered_cards downcards;
-};
+typedef struct {
+	unordered_cards_t hand;
+	unordered_cards_t upcards;
+	unordered_cards_t downcards;
+} player_t;
 
-void player_init(struct player * p);
+void player_init(player_t * p);
 
 #endif
