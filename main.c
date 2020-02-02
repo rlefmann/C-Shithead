@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 #include "cards.h"
 #include "player.h"
@@ -18,6 +19,10 @@ main(void)
 
 	game_t g;
 	game_init(&g);
+
+	char cardval = 4;
+	uint64_t cardbits = cardvalue_to_cardbits(cardval);
+	print_cardbits(cardbits);
 
 	return EXIT_SUCCESS;
 }

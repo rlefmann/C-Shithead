@@ -7,6 +7,12 @@
 #define NUM_CARDS 52
 #define NUM_CARDS_HAND 3
 #define NUM_CARDS_UP_DOWN 3
+#define NUM_SUITS 4
+
+char cardvalue_to_rank(char value);
+char cardvalue_to_suit(char value);
+uint64_t cardvalue_to_cardbits(char value);
+void print_cardbits(uint64_t bits);
 
 typedef struct {
 	uint64_t bits;
