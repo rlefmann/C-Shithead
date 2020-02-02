@@ -1,6 +1,9 @@
 #ifndef CARDS_H
 #define CARDS_H
 
+#include <string.h>
+#include <inttypes.h>
+
 #define NUM_CARDS 52
 #define NUM_CARDS_HAND 3
 #define NUM_CARDS_UP_DOWN 3
