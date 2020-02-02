@@ -20,6 +20,7 @@ typedef struct {
 } unordered_cards_t;
 
 void unordered_cards_init(unordered_cards_t * cards);
+void unordered_cards_add(unordered_cards_t * cards, uint64_t bits);
 
 typedef struct {
 	char values[NUM_CARDS];

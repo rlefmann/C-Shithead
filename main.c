@@ -24,5 +24,8 @@ main(void)
 	uint64_t cardbits = cardvalue_to_cardbits(cardval);
 	print_cardbits(cardbits);
 
+	unordered_cards_add(&hand, cardbits);
+	print_cardbits(hand.bits);
+
 	return EXIT_SUCCESS;
 }

@@ -1,6 +1,8 @@
+#include "cards.h"
+
+#include "util.h"
 #include <stdio.h>
 
-#include "cards.h"
 
 char
 cardvalue_to_rank(char value)
@@ -36,6 +38,15 @@ unordered_cards_init(unordered_cards_t * cards)
 {
 	cards->bits = 0;
 	cards->n = 0;
+}
+
+void
+unordered_cards_add(unordered_cards_t * cards, uint64_t bits)
+{
+	if (cards->bits & bits != 0) {
+		die("Error: trying to add a card the same card twice.\n");
+	}
+	cards->bits = cards->bits | bits;
 }
 
 void
