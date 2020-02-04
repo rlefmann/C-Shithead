@@ -23,6 +23,9 @@ tests: $(OBJECTS_TEST)
 test/tests.o: test/tests.c test/tests.h test/minunit.h
 test/test_cards.o: test/test_cards.c test/tests.h src/cards.h
 
+clean:
+	-rm -rf src/*.o test/*.o $(BIN) tests
+
 .SUFFIXES: .c .o
 .c.o:
 	$(CC) $(CFLAGS) -c -o $@ $<
